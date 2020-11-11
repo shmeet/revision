@@ -92,3 +92,10 @@ void sort(int arr[]){
 		}	
 	}
 ```
+
+### rotate 
+```java
+reverse(arr,0,k-1);
+reverse(arr,k,arr.length-1);
+reverse(arr,0,arr.length-1);
+```
