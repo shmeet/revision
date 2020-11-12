@@ -5,11 +5,11 @@
     - [Reverse](#reverse)
     - [Reverse K](#reverse-k)
 - [Arrays](#arrays)
-    - [Quick sort partition]("#quick-sort-partition")
-    - [k Smallest]("#k-smallest")
-    - [sort 0 1 2]("#sort-0-1-2")
-    - [rotate]("#rotate")
-    - [Kadane Algo]("#kadane-algo")
+    - [Quick sort partition](#quick-sort-partition)
+    - [k Smallest](#k-smallest)
+    - [sort 0 1 2](#sort-0-1-2)
+    - [rotate](#rotate)
+    - [Kadane Algo](#kadane-algo)
 
 ## Linked List
 
