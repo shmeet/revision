@@ -1,5 +1,16 @@
 # Core logics
 
+## Table of Contents
+- [Linked List](#linked-list)
+    - [Reverse](#reverse)
+    - [Reverse K](#reverse-k)
+- [Arrays](#arrays)
+    - [Quick sort partition]("#quick-sort-partition")
+    - [k Smallest]("#k-smallest")
+    - [sort 0 1 2]("#sort-0-1-2")
+    - [rotate]("#rotate")
+    - [Kadane Algo]("#kadane-algo")
+
 ## Linked List
 
 ### Reverse
@@ -100,7 +111,7 @@ reverse(arr,k,arr.length-1);
 reverse(arr,0,arr.length-1);
 ```
 
-### Kadane's Algo
+### Kadane Algo
 
 ```java
 int findMaximumSum(int arr[]){
