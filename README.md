@@ -99,3 +99,17 @@ reverse(arr,0,k-1);
 reverse(arr,k,arr.length-1);
 reverse(arr,0,arr.length-1);
 ```
+
+### Kadane's Algo
+
+```java
+int findMaximumSum(int arr[]){
+	int maxendinghere = 0;
+	int max = 0;
+	for(int n: arr){
+	  maxendinghere = math.max(maxendinghere+n,n);
+	  max = math.max(maxendinghere,max);
+	}
+	return max;
+}
+```
