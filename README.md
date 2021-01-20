@@ -15,7 +15,7 @@
 
 ### Reverse
 
-```java 
+```java
 Node current = start;
 Node prev = null;
 while(current != null){
@@ -28,7 +28,7 @@ start = prev;
 ```
 ### reverse k
 
-```java 
+```java
 Node current = head;
 Node prev = null;
 Node next = null;
@@ -46,7 +46,7 @@ return prev;
 
 ## Arrays
 ### Quick sort partition
-```java 
+```java
 	int partition(int arr[],int p,int q){
 		int piv = q;
 		int i = p;
@@ -64,8 +64,59 @@ return prev;
 		return i;
 	}
 ```
+#### Explanation
+```
+partition: arr = [24, 28, 14, 82, 8, 58, 64, 12, 94, 29]
+let:
+lb = 0
+ub = n-1 = 9
+e = lb
+f = ub
+num=arr[lb]
+
+1 increment e untill encounter arr[e] which is > num or e == ub
+2 decrement f untill encounter arr[e] which is <= num or f==lb
+3 if e and f crosses ( e > f) then swap values at index lb and f. return f.
+4 if not then swap values at index e and f continue from 1
+
+eg:
+arr = [24, 28, 14, 82, 8, 58, 64, 12, 94, 29]
+lb = 0, ub = 9, e = 0, f = 9
+num = 24
+after step 1:
+arr = [24, 28, 14, 82, 8, 58, 64, 12, 94, 29]
+e = 1
+after step 2:
+arr = [24, 28, 14, 82, 8, 58, 64, 12, 94, 29]
+f = 7
+step 3 does not apply
+after step 4
+arr = [24, 28, 14, 82, 8, 58, 64, 12, 94, 29]
+arr = [24, 12, 14, 82, 8, 58, 64, 28, 94, 29]
+back to step1
+after step1:
+arr = [24, 12, 14, 82, 8, 58, 64, 28, 94, 29]
+e = 3
+after step2:
+arr = [24, 12, 14, 82, 8, 58, 64, 28, 94, 29]
+f = 4
+step3 does not apply
+after step 4
+arr = [24, 12, 14, 8, 82, 58, 64, 28, 94, 29]
+back to step1
+after step1
+arr = [24, 12, 14, 8, 82, 58, 64, 28, 94, 29]
+e = 4
+after step2
+arr = [24, 12, 14, 8, 82, 58, 64, 28, 94, 29]
+f = 3
+after step3 (which applies now since e = 4, f = 3 hence e > f)
+arr = [8, 12, 14, 24, 82, 58, 64, 28, 94, 29]
+** now the element 24 is at the position on which it sould be in a ascending order, all the elements which are greater than this are on the right side and all the smaller elements are on the left side, here the value of f should be returned which is 3 and the parition point **
+```
+
 ### k Smallest
-```java 
+```java
 	int k_smallest(int arr[],int p, int q, int i){
 		if(p>=q) return q;
 		int r = partition(arr,p,q);
@@ -79,7 +130,7 @@ return prev;
 ```
 
 ### sort 0 1 2
-```java 
+```java
 void sort(int arr[]){
 		int low = 0;
 		int mid = 0;
@@ -100,11 +151,11 @@ void sort(int arr[]){
 				continue;
 			}
 			i++;
-		}	
+		}
 	}
 ```
 
-### rotate 
+### rotate
 ```java
 reverse(arr,0,k-1);
 reverse(arr,k,arr.length-1);
